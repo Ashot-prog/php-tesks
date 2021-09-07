@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Document</title>
-</head>
-<body>
+</head >
+<body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Home</a>
+        <a class="navbar-brand" href="index.php#">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -78,5 +79,35 @@
         </div>
     </div>
 </nav>
+<p style="background-color: white;width: 100%;height: 100%;text-align: center; margin-bottom: 4rem;margin-h">
+    14. Write a PHP script to check whether a string contains a specific string?<br>
+    Sample string : 'The quick brown fox jumps over the lazy dog.'
+
+
+</p>
+<p style="text-align: center">
+    <?php
+    $str1 = 'The quick brown fox jumps over the lazy dog.';
+    if (strpos($str1,'fox') !== false)
+    {
+        echo 'Word is present.';
+    }
+    else
+    {
+        echo 'Word is not present.';
+    }
+    ?>
+</p>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
