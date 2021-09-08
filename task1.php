@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -83,13 +83,13 @@
     "The memory of that scene for me is like a frame of film forever frozen at that moment: the red carpet, the green lawn, the white house, the leaden sky. The new president and his first lady. - Richard M. Nixon"
     and the words 'red', 'green' and 'white' will come from $color.
 </p>
-
 <?php
-$color = ['white', 'green','red','blue','black'];
-echo '<p style="text-align: center">The memory of that scene for me is like a frame of film forever frozen at
-    that moment:<br> the'. $color[2] .' carpet, the'.$color[1].' lawn, the'. $color[0].' house, the leade sky.
-    The new president and his first lady. - Richard M. Nixon</p> <br><br>';
+include 'include/baseClass.php';
+
+$MyTask = new NewClass();
+$MyTask->task1(['white', 'green','red','blue','black']);
 ?>
+
 
 </body>
 </html>

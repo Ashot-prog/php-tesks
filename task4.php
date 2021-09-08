@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href='index.php'>Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -89,8 +89,11 @@
 </p>
 <p style="text-align: center">
 <?php
-$array = [1,2,3,4,5];
-print_r(array_slice($array, rand(0,3)));
+include 'include/baseClass.php';
+
+$MyTask = new NewClass();
+print_r($MyTask->task4([1,2,3,4,5]));
+
 ?>
 </p>
 </body>

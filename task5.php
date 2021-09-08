@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -87,9 +87,9 @@
 </p>
 <p style="text-align: center">
 <?php
-$color = [4 => 'white', 6 => 'green', 11=> 'red'];
-rsort($color);
-echo $color[0];
+include 'include/baseClass.php';
+$MyTask = new NewClass();
+print_r( $MyTask->task5([4 => 'white', 6 => 'green', 11 => 'red']));
 ?>
 </p>
 </body>

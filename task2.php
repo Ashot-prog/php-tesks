@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -84,11 +84,10 @@
     white, green, red,<br>
 </p>
 <?php
-$colors = ['white', 'green','red'];
-for ($i=0; $i<3;$i++){
-//    echo $colors[$i];
-    echo'<p style="text-align: center">'. $colors[$i].'</p> ';
-}
+include 'include/baseClass.php';
+
+$MyTask = new NewClass();
+$MyTask->task2(['white', 'green','red']);
 ?>
 
 </body>

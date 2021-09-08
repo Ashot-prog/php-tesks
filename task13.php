@@ -12,7 +12,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -90,10 +90,10 @@
 </p>
 <p style="text-align: center">
     <?php
-    print(strtoupper("the quick brown fox jumps over the lazy dog.")).'<br>';
-    print(strtolower("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG")).'<br>';
-    print(ucfirst("the quick brown fox jumps over the lazy dog.")).'<br>';
-    print(ucwords("the quick brown fox jumps over the lazy dog."));
+    include 'include/baseClass.php';
+    $MyTask= new NewClass();
+    $MyTask->task13("the quick brown fox jumps over the lazy dog.");
+//    echo(transform())
     ?>
 </p>
 </body>

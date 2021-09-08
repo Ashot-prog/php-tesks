@@ -12,7 +12,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -89,30 +89,9 @@
 </p>
 <p style="text-align: center">
     <?php
-    function getFirstDiffLetterFromTwoString(string $string1, string $string2): string
-    {
-        if (strlen($string1) !== strlen($string2)) {
-            return 'No valid strings';
-        }
-
-        for ($i = 0; $i < strlen($string1); $i++) {
-            $flag = true;
-            for ($j = 0; $j < strlen($string2); $j++) {
-                if($string1[$i] == $string2[$j]) {
-                    $flag = false;
-                    break;
-                }
-            }
-
-            if($flag) {
-                echo $i;
-                die($string1[$i]);
-            }
-        }
-
-    }
-
-    echo getFirstDiffLetterFromTwoString('football', 'footboll');
+    include 'include/baseClass.php';
+    $MyTask= new NewClass();
+    echo $MyTask->task19('football', 'footboll');
 
 
 

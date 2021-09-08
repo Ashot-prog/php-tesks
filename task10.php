@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -86,9 +86,29 @@
 </p>
 <p style="text-align: center">
     <?php
-    $array = [5,3,1,3,8,7,4,1,1,3];
-    rsort($array);
-    var_dump($array);
+//    include 'include/baseClass.php';
+//    $MyTask= new NewClass();
+//    $MyTask->task10([5, 3, 1, 3, 8, 7, 4, 1, 1, 3]);
+    function columns($uarr) {
+        $n=$uarr;
+        if (count($n) == 0)
+            return array();
+        else if (count($n) == 1)
+            return array_chunk($n[0], 1);
+        array_unshift($uarr, NULL);
+        $transpose = call_user_func_array('array_map', $uarr);
+        return array_map('array_filter', $transpose);
+    }
+
+    function bead_sort($uarr) {
+        foreach ($uarr as $e)
+            $poles []= array_fill(0, $e, 1);
+        return array_map('count', columns(columns($poles)));
+    }
+
+    $array = array(5, 3, 1, 3, 8, 7, 4, 1, 1, 3);
+    $sorted = bead_sort($array);
+    print_r($sorted);
     ?>
 </p>
 </body>

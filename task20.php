@@ -12,7 +12,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -88,11 +88,10 @@
 </p>
 <p style="text-align: center">
     <?php
-    function removeComma(string $number): string
-    {
-        return str_replace( ',', '', $number);
-    }
-    echo removeComma('2,543.12');
+    include 'include/baseClass.php';
+    $MyTask= new NewClass();
+    echo $MyTask->task20('2,543.12');
+
     ?>
 </p>
 </body>

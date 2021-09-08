@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -93,26 +93,10 @@
 </p>
 <p style="text-align: center">
    <?php
-$array=["Sophia"=>"31","Jacob"=>"41","William"=>"39","Ramesh"=>"40"];
-sort($array);
-echo "<pre>";
-print_r($array);
-echo "</pre>";
+   include 'include/baseClass.php';
+   $MyTask= new NewClass();
+   $MyTask->task8(["Sophia" => "31", "Jacob" => "41", "William" => "39", "Ramesh" => "40"]);
 
-rsort($array);
-echo "<pre>";
-print_r($array);
-echo "</pre>";
-
-ksort($array);
-echo "<pre>";
-print_r($array);
-echo "</pre>";
-
-krsort($array);
-echo "<pre>";
-print_r($array);
-echo "</pre>";
 ?>
 </p>
 </body>

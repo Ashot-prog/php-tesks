@@ -12,7 +12,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -87,15 +87,11 @@
 </p>
 <p style="text-align: center">
     <?php
-    $str1 = 'The quick brown fox jumps over the lazy dog.';
-    if (strpos($str1,'fox') !== false)
-    {
-        echo 'Word is present.';
-    }
-    else
-    {
-        echo 'Word is not present.';
-    }
+    include 'include/baseClass.php';
+    $MyTask= new NewClass();
+    echo $MyTask->task14('The quick brown fox jumps over the lazy dog.', 'fox');
+
+
     ?>
 </p>
 </body>

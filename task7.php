@@ -11,7 +11,7 @@
 <body style="background-color: azure">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -92,9 +92,10 @@
 </p>
 <p style="text-align: center">
     <?php
-    $number = [1,2,3,4,5,];
-    array_splice($number, rand(0,5),0,'$');
-    print_r($number);
+    include 'include/baseClass.php';
+    $MyTask= new NewClass();
+
+    print_r($MyTask->task7([1, 2, 3, 4, 5,]));
     ?>
 </p>
 </body>
