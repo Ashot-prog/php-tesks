@@ -89,9 +89,35 @@
 </p>
 <p style="text-align: center">
     <?php
-    include 'include/baseClass.php';
-    $MyTask= new NewClass();
-    echo $MyTask->task19('football', 'footboll');
+    function task19(string $string1, string $string2): string
+    {
+        $string='';
+
+        if (strlen($string1) !== strlen($string2)) {
+            return 'No valid strings';
+        }
+
+        for ($i = 0; $i < strlen($string1); $i++) {
+            $flag = true;
+            for ($j = 0; $j < strlen($string2); $j++) {
+                if($string1[$i] == $string2[$j]) {
+                    $flag = false;
+
+                    break;
+                }
+            }
+
+            if ($flag) {
+                $string = $i. ':'.' '.'"'. $string1[$i].' '.'"'.'vs'.'"'.' '.$string2[$i].'"';
+                break;
+
+            }
+        }
+
+        return $string;
+
+    }
+    echo task19('football', 'footboll');
 
 
 

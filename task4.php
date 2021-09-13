@@ -9,75 +9,7 @@
     <title>Document</title>
 </head >
 <body style="background-color: azure">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href='index.php'>Home</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task1.php">Task1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task2.php">Task2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task3.php">Task3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task4.php">Task4</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task5.php">Task5</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task6.php">Task6</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task7.php">Task7</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task8.php">Task8</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task9.php">Task9</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task10.php">Task10</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task11.php">Task11</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task12.php">Task12</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task13.php">Task13</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task14.php">Task14</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task15.php">Task15</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task16.php">Task16</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task17.php">Task17</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task18.php">Task18</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task19.php">Task19</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="task20.php">Task20</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 <p style="background-color: white;width: 100%;height: 100%;text-align: center; margin-bottom: 4rem;margin-h">
     4. $x = [1, 2, 3, 4, 5];<br>
     Delete an element from the above PHP array. After deleting the element, integer keys must be normalized.<br>
@@ -89,10 +21,18 @@
 </p>
 <p style="text-align: center">
 <?php
-include 'include/baseClass.php';
+function task4(array $array)
+{
+    return array_slice($array, rand(0, count($array)));
+}
 
-$MyTask = new NewClass();
-print_r($MyTask->task4([1,2,3,4,5]));
+function task5(array $color)
+{
+
+    $firstKey = array_key_first($color);
+    return $color[$firstKey];
+}
+print_r(task4([1,2,3,4,5]));
 
 ?>
 </p>
